@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		403525041B34A881002C582F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403525031B34A881002C582F /* AppDelegate.swift */; };
+		403525061B34A881002C582F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 403525051B34A881002C582F /* Images.xcassets */; };
+		403525091B34A881002C582F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 403525071B34A881002C582F /* MainMenu.xib */; };
+		403525151B34A881002C582F /* MustacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403525141B34A881002C582F /* MustacheTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4035250F1B34A881002C582F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 403524F61B34A881002C582F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 403524FD1B34A881002C582F;
+			remoteInfo = Mustache;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		403524FE1B34A881002C582F /* Mustache.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mustache.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		403525021B34A881002C582F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		403525031B34A881002C582F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		403525051B34A881002C582F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		403525081B34A881002C582F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4035250E1B34A881002C582F /* MustacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MustacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		403525131B34A881002C582F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		403525141B34A881002C582F /* MustacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustacheTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		403524FB1B34A881002C582F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4035250B1B34A881002C582F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		403524F51B34A881002C582F = {
+			isa = PBXGroup;
+			children = (
+				403525001B34A881002C582F /* Mustache */,
+				403525111B34A881002C582F /* MustacheTests */,
+				403524FF1B34A881002C582F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		403524FF1B34A881002C582F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				403524FE1B34A881002C582F /* Mustache.app */,
+				4035250E1B34A881002C582F /* MustacheTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		403525001B34A881002C582F /* Mustache */ = {
+			isa = PBXGroup;
+			children = (
+				403525031B34A881002C582F /* AppDelegate.swift */,
+				403525051B34A881002C582F /* Images.xcassets */,
+				403525071B34A881002C582F /* MainMenu.xib */,
+				403525011B34A881002C582F /* Supporting Files */,
+			);
+			path = Mustache;
+			sourceTree = "<group>";
+		};
+		403525011B34A881002C582F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				403525021B34A881002C582F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		403525111B34A881002C582F /* MustacheTests */ = {
+			isa = PBXGroup;
+			children = (
+				403525141B34A881002C582F /* MustacheTests.swift */,
+				403525121B34A881002C582F /* Supporting Files */,
+			);
+			path = MustacheTests;
+			sourceTree = "<group>";
+		};
+		403525121B34A881002C582F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				403525131B34A881002C582F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		403524FD1B34A881002C582F /* Mustache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 403525181B34A881002C582F /* Build configuration list for PBXNativeTarget "Mustache" */;
+			buildPhases = (
+				403524FA1B34A881002C582F /* Sources */,
+				403524FB1B34A881002C582F /* Frameworks */,
+				403524FC1B34A881002C582F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mustache;
+			productName = Mustache;
+			productReference = 403524FE1B34A881002C582F /* Mustache.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4035250D1B34A881002C582F /* MustacheTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4035251B1B34A881002C582F /* Build configuration list for PBXNativeTarget "MustacheTests" */;
+			buildPhases = (
+				4035250A1B34A881002C582F /* Sources */,
+				4035250B1B34A881002C582F /* Frameworks */,
+				4035250C1B34A881002C582F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				403525101B34A881002C582F /* PBXTargetDependency */,
+			);
+			name = MustacheTests;
+			productName = MustacheTests;
+			productReference = 4035250E1B34A881002C582F /* MustacheTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		403524F61B34A881002C582F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = aberger.me;
+				TargetAttributes = {
+					403524FD1B34A881002C582F = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					4035250D1B34A881002C582F = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 403524FD1B34A881002C582F;
+					};
+				};
+			};
+			buildConfigurationList = 403524F91B34A881002C582F /* Build configuration list for PBXProject "Mustache" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 403524F51B34A881002C582F;
+			productRefGroup = 403524FF1B34A881002C582F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				403524FD1B34A881002C582F /* Mustache */,
+				4035250D1B34A881002C582F /* MustacheTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		403524FC1B34A881002C582F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				403525061B34A881002C582F /* Images.xcassets in Resources */,
+				403525091B34A881002C582F /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4035250C1B34A881002C582F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		403524FA1B34A881002C582F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				403525041B34A881002C582F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4035250A1B34A881002C582F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				403525151B34A881002C582F /* MustacheTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		403525101B34A881002C582F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 403524FD1B34A881002C582F /* Mustache */;
+			targetProxy = 4035250F1B34A881002C582F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		403525071B34A881002C582F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				403525081B34A881002C582F /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		403525161B34A881002C582F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		403525171B34A881002C582F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		403525191B34A881002C582F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Mustache/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4035251A1B34A881002C582F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Mustache/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4035251C1B34A881002C582F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MustacheTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mustache.app/Contents/MacOS/Mustache";
+			};
+			name = Debug;
+		};
+		4035251D1B34A881002C582F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MustacheTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mustache.app/Contents/MacOS/Mustache";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		403524F91B34A881002C582F /* Build configuration list for PBXProject "Mustache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				403525161B34A881002C582F /* Debug */,
+				403525171B34A881002C582F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		403525181B34A881002C582F /* Build configuration list for PBXNativeTarget "Mustache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				403525191B34A881002C582F /* Debug */,
+				4035251A1B34A881002C582F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4035251B1B34A881002C582F /* Build configuration list for PBXNativeTarget "MustacheTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4035251C1B34A881002C582F /* Debug */,
+				4035251D1B34A881002C582F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 403524F61B34A881002C582F /* Project object */;
+}
