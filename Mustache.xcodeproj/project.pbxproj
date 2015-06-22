@@ -11,6 +11,8 @@
 		403525061B34A881002C582F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 403525051B34A881002C582F /* Images.xcassets */; };
 		403525091B34A881002C582F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 403525071B34A881002C582F /* MainMenu.xib */; };
 		403525151B34A881002C582F /* MustacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403525141B34A881002C582F /* MustacheTests.swift */; };
+		403525201B34A91E002C582F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4035251E1B34A91E002C582F /* CalendarViewController.swift */; };
+		403525211B34A91E002C582F /* CalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4035251F1B34A91E002C582F /* CalendarViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 		4035250E1B34A881002C582F /* MustacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MustacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		403525131B34A881002C582F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		403525141B34A881002C582F /* MustacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MustacheTests.swift; sourceTree = "<group>"; };
+		4035251E1B34A91E002C582F /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		4035251F1B34A91E002C582F /* CalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 				403525051B34A881002C582F /* Images.xcassets */,
 				403525071B34A881002C582F /* MainMenu.xib */,
 				403525011B34A881002C582F /* Supporting Files */,
+				4035251E1B34A91E002C582F /* CalendarViewController.swift */,
+				4035251F1B34A91E002C582F /* CalendarViewController.xib */,
 			);
 			path = Mustache;
 			sourceTree = "<group>";
@@ -188,6 +194,7 @@
 			files = (
 				403525061B34A881002C582F /* Images.xcassets in Resources */,
 				403525091B34A881002C582F /* MainMenu.xib in Resources */,
+				403525211B34A91E002C582F /* CalendarViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403525201B34A91E002C582F /* CalendarViewController.swift in Sources */,
 				403525041B34A881002C582F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

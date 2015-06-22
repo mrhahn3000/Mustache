@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CalendarViewController" customModule="Mustache" customModuleProvider="target">
+            <connections>
+                <outlet property="copyEventsButton" destination="luH-ve-NJj" id="mFw-FA-etl"/>
+                <outlet property="deleteEventsButton" destination="PIO-kz-Qt5" id="5Hx-Bj-I6a"/>
+                <outlet property="destinationCalendarLabel" destination="UTc-Hk-FHP" id="aIO-Vk-E70"/>
+                <outlet property="destinationCalendarPopUp" destination="HjT-uo-XhK" id="Ymx-Qc-WG8"/>
+                <outlet property="sourceCalendarLabel" destination="Ti7-QU-4Nr" id="LWS-pm-Rjb"/>
+                <outlet property="sourceCalendarPopUp" destination="qd0-tS-e3R" id="4Nh-C2-BeK"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="102"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qd0-tS-e3R">
+                    <rect key="frame" x="204" y="58" width="73" height="26"/>
+                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="HLY-Mp-0Dk" id="F0v-B4-ZlL">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="ieA-si-0EC">
+                            <items>
+                                <menuItem title="Item 1" state="on" id="HLY-Mp-0Dk"/>
+                                <menuItem title="Item 2" id="k0s-Gl-akR"/>
+                                <menuItem title="Item 3" id="SAh-TN-zno"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                </popUpButton>
+                <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HjT-uo-XhK">
+                    <rect key="frame" x="204" y="17" width="73" height="26"/>
+                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="mJA-eS-Oz6" id="RSd-D1-Ypi">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="menu"/>
+                        <menu key="menu" id="B5d-6b-2Mh">
+                            <items>
+                                <menuItem title="Item 1" state="on" id="mJA-eS-Oz6"/>
+                                <menuItem title="Item 2" id="CGw-Pz-rhx"/>
+                                <menuItem title="Item 3" id="mOA-Py-Wsb"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                </popUpButton>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ti7-QU-4Nr">
+                    <rect key="frame" x="160" y="65" width="36" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="From" id="Vz3-Qc-bBG">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTc-Hk-FHP">
+                    <rect key="frame" x="160" y="24" width="19" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="To" id="Cms-S8-lV0">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIO-kz-Qt5">
+                    <rect key="frame" x="351" y="58" width="116" height="25"/>
+                    <buttonCell key="cell" type="roundTextured" title="Delete" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="SEX-cg-cQo">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="deleteDestinationCalendarEvents:" target="-2" id="Jbq-Sx-JyH"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="luH-ve-NJj">
+                    <rect key="frame" x="351" y="17" width="116" height="25"/>
+                    <buttonCell key="cell" type="roundTextured" title="Copy" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LSl-7x-GZW">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="copyEventsToSourceCalendar:" target="-2" id="mDC-YW-jaz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="HjT-uo-XhK" secondAttribute="bottom" constant="20" id="10V-Je-vca"/>
+                <constraint firstItem="qd0-tS-e3R" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="7KR-7S-AgE"/>
+                <constraint firstAttribute="centerX" secondItem="qd0-tS-e3R" secondAttribute="centerX" id="Z3h-UV-fVj"/>
+                <constraint firstAttribute="centerX" secondItem="HjT-uo-XhK" secondAttribute="centerX" id="ac9-rV-suF"/>
+                <constraint firstItem="HjT-uo-XhK" firstAttribute="top" secondItem="qd0-tS-e3R" secondAttribute="bottom" constant="20" id="f5c-2a-O58"/>
+            </constraints>
+            <point key="canvasLocation" x="423" y="180"/>
+        </customView>
+    </objects>
+</document>
