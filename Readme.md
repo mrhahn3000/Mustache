@@ -3,11 +3,11 @@
 
 Copy events from one calendar into another
 
-** Work in progress **
+**Work in progress**
 
 
 Authors
-———
+-------
 
 **alex berger**
 
@@ -18,6 +18,6 @@ Authors
 
 
 Copyright
-————
+-------
 
 Copyright 2015 aberger.me
