@@ -67,7 +67,7 @@ class CalendarViewController: NSViewController {
         for event in eventList {
             if let event = event as? EKEvent {
                 var error: NSError?
-                eventStore.removeEvent(event, span: EKSpanThisEvent, commit: true, error: &error)
+                eventStore.removeEvent(event, span: EKSpanFutureEvents, commit: true, error: &error)
                 if error != nil {
                     println(error?.description)
                 }
@@ -89,7 +89,7 @@ class CalendarViewController: NSViewController {
                 newEvent.startDate = event.startDate
                 newEvent.endDate = event.endDate
                 newEvent.allDay = event.allDay
-                newEvent.recurrenceRules = event.recurrenceRules
+//                newEvent.recurrenceRules = event.recurrenceRules
                 newEvent.availability = event.availability
                 newEvent.timeZone = event.timeZone
                 newEvent.notes = event.notes
@@ -110,7 +110,6 @@ class CalendarViewController: NSViewController {
     
     @IBAction func deleteDestinationCalendarEvents(sender: AnyObject) {
         var alert = NSAlert()
-        alert.delegate = self
         alert.informativeText = "Are you sure you want to delete all events from the destination calendars?"
         alert.messageText = "This action can not be reverted."
         alert.showsHelp = false
@@ -136,8 +135,4 @@ class CalendarViewController: NSViewController {
                 copyAllFutureEvents(sourceCalendarIdentifier, toCalendar: destinationCalendarIdentifier)
         }
     }
-}
-
-extension CalendarViewController: NSAlertDelegate {
-    
 }
