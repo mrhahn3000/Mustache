@@ -21,7 +21,7 @@ class CalendarViewController: NSViewController {
     
     
     let startDate = NSDate()
-    let endDate = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.CalendarUnitYear, value: 1, toDate: NSDate(), options: NSCalendarOptions(0))
+    let endDate = NSCalendar.currentCalendar().dateByAddingUnit(NSCalendarUnit.Month, value: 3, toDate: NSDate(), options: NSCalendarOptions(rawValue: 0))
     var calendarDictionary = [String : String]()
     let eventStore = EKEventStore()
 
@@ -33,16 +33,19 @@ class CalendarViewController: NSViewController {
     override func viewDidAppear() {
         super.viewDidAppear()
         
-        eventStore.requestAccessToEntityType(EKEntityTypeEvent, completion: { (granted: Bool, error: NSError!) -> Void in
+        eventStore.requestAccessToEntityType(EKEntityType.Event, completion: { (granted: Bool, error: NSError?) -> Void in
             if granted {
-                var calendars = self.readAllLocalCalendars()
+                let calendars = self.readAllLocalCalendars()
+                
                 for calendar in calendars {
                     self.calendarDictionary[calendar.title] = calendar.calendarIdentifier
                 }
+                
                 self.sourceCalendarPopUp.removeAllItems()
-                self.sourceCalendarPopUp.addItemsWithTitles(self.calendarDictionary.keys.array)
+                self.sourceCalendarPopUp.addItemsWithTitles(Array(self.calendarDictionary.keys))
                 self.destinationCalendarPopUp.removeAllItems()
-                self.destinationCalendarPopUp.addItemsWithTitles(self.calendarDictionary.keys.array)
+                self.destinationCalendarPopUp.addItemsWithTitles(Array(self.calendarDictionary.keys))
+                
                 if self.destinationCalendarPopUp.itemArray.count > 0 {
                     self.destinationCalendarPopUp.selectItemAtIndex(1)
                 }
@@ -51,7 +54,7 @@ class CalendarViewController: NSViewController {
     }
     
     private func readAllLocalCalendars() -> [EKCalendar] {
-        if let calendars = eventStore.calendarsForEntityType(EKEntityTypeEvent) as? [EKCalendar] {
+        if let calendars : [EKCalendar] = eventStore.calendarsForEntityType(EKEntityType.Event) {
             return calendars
         }
         
@@ -61,15 +64,15 @@ class CalendarViewController: NSViewController {
     private func deleteAllFutureEvents(calendarIdentifier: String) {
         let calendar = eventStore.calendarWithIdentifier(calendarIdentifier)
         
-        let eventsPredicate = eventStore.predicateForEventsWithStartDate(startDate, endDate: endDate, calendars: [calendar])
+        let eventsPredicate = eventStore.predicateForEventsWithStartDate(startDate, endDate: endDate!, calendars: [calendar!])
         let eventList = eventStore.eventsMatchingPredicate(eventsPredicate)
         
         for event in eventList {
-            if let event = event as? EKEvent {
-                var error: NSError?
-                eventStore.removeEvent(event, span: EKSpanFutureEvents, commit: true, error: &error)
-                if error != nil {
-                    println(error?.description)
+            if let event : EKEvent = event {
+                do {
+                    try eventStore.removeEvent(event, span: EKSpan.FutureEvents, commit: true)
+                } catch {
+                    print(error)
                 }
             }
         }
@@ -79,42 +82,46 @@ class CalendarViewController: NSViewController {
         let sourceCalendar = eventStore.calendarWithIdentifier(fromCalendar)
         let destinationCalendar = eventStore.calendarWithIdentifier(toCalendar)
         
-        let eventsPredicate = eventStore.predicateForEventsWithStartDate(startDate, endDate: endDate, calendars: [sourceCalendar])
+        let eventsPredicate = eventStore.predicateForEventsWithStartDate(startDate, endDate: endDate!, calendars: [sourceCalendar!])
         let eventList = eventStore.eventsMatchingPredicate(eventsPredicate)
         
         for event in eventList {
-            if let event = event as? EKEvent {
-                var newEvent = EKEvent(eventStore: eventStore)
+            if let event : EKEvent = event {
+                let newEvent = EKEvent(eventStore: eventStore)
                 newEvent.title = event.title
                 newEvent.startDate = event.startDate
                 newEvent.endDate = event.endDate
                 newEvent.allDay = event.allDay
-//                newEvent.recurrenceRules = event.recurrenceRules
+                // newEvent.recurrenceRules = event.recurrenceRules
                 newEvent.availability = event.availability
                 newEvent.timeZone = event.timeZone
                 newEvent.notes = event.notes
                 newEvent.location = event.location
                 // read-only properties:
-                //                newEvent.occurrenceDate = event.occurrenceDate
-                //                newEvent.status = event.status
-                //                newEvent.organizer = event.organizer
-                //                newEvent.attendees = event.attendees
+                // newEvent.occurrenceDate = event.occurrenceDate
+                // newEvent.status = event.status
+                // newEvent.organizer = event.organizer
+                // newEvent.attendees = event.attendees
                 
-                newEvent.calendar = destinationCalendar
-                
-                var error: NSError?
-                eventStore.saveEvent(newEvent, span: EKSpanThisEvent, commit: true, error: &error)
+                newEvent.calendar = destinationCalendar!
+                do {
+                    try eventStore.saveEvent(newEvent, span: EKSpan.ThisEvent, commit: true)
+                } catch {
+                    print(error)
+                }
             }
         }
     }
     
     @IBAction func deleteDestinationCalendarEvents(sender: AnyObject) {
-        var alert = NSAlert()
+        let alert = NSAlert()
+        
         alert.informativeText = "Are you sure you want to delete all events from the destination calendars?"
         alert.messageText = "This action can not be reverted."
         alert.showsHelp = false
         alert.addButtonWithTitle("I understand")
         alert.addButtonWithTitle("Cancel")
+        
         let button = alert.runModal()
         if button == NSAlertFirstButtonReturn {
             if let selectedCalendar = destinationCalendarPopUp.selectedItem?.title,
@@ -122,9 +129,6 @@ class CalendarViewController: NSViewController {
                     deleteAllFutureEvents(calendarIdentifier)
             }
         }
-//        else if button == NSAlertSecondButtonReturn {
-//            println("cancel, do nothing")
-//        }
     }
     
     @IBAction func copyEventsToSourceCalendar(sender: AnyObject) {
